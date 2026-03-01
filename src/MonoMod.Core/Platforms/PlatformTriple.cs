@@ -87,7 +87,7 @@ namespace MonoMod.Core.Platforms
             => PlatformDetection.OS switch
             {
                 OSKind.Posix => throw new NotImplementedException(),
-                OSKind.Linux => new Systems.AndroidSystem(), // on some devices android got detected as linux
+                OSKind.Linux => new Systems.LinuxSystem(),
                 OSKind.Android => new Systems.AndroidSystem(),
                 OSKind.OSX => new Systems.MacOSSystem(),
                 OSKind.IOS => throw new NotImplementedException(),
